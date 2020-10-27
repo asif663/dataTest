@@ -17,7 +17,7 @@ def country_vs_perday_total_sale():
 
 
 def country_vs_perday_total_customer():
-    """plot total customer perday from diff country"""
+    """customer perday from diff country"""
     test_data_df = get_data()
     test_data_df['InvoiceDate'] = pd.to_datetime(
         test_data_df['InvoiceDate']).dt.date
@@ -26,7 +26,7 @@ def country_vs_perday_total_customer():
     return test_data_df
 
 def country_vs_order_quantity():
-    """plot total customer perday from diff country"""
+    """country vs total quantity"""
     test_data_df = get_data()
     test_data_df['InvoiceDate'] = pd.to_datetime(
         test_data_df['InvoiceDate']).dt.date
@@ -35,5 +35,7 @@ def country_vs_order_quantity():
     return test_data_df
 
 if __name__=='__main__':
+    country_vs_perday_total_customer()
+    country_vs_order_quantity()
     country_vs_perday_total_customer()
   
